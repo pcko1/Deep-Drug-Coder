@@ -7,7 +7,7 @@ setup(
     url="https://github.com/pcko1/Deep-Drug-Coder",
     author="Panagiotis-Christos Kotsias",
     author_email="kotsias.pan@gmail.com",
-    license="GPLv3",
+    license="MIT",
     packages=["ddc_pub"],
     install_requires=[
         "numpy",
