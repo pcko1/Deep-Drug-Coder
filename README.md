@@ -4,6 +4,8 @@
 
 Currently only GPU version of the model is supported. You need access to a GPU to use it.
 
+*More detailed instructions are to be pushed soon.*
+
 ### Installation
 - Clone the repo and navigate to it
 - Create a predefined Python3.6 conda environment by `conda env create -f env/ddc_env.yml`
