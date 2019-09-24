@@ -6,7 +6,7 @@ Code for the purposes of [Direct Steering of de novo Molecular Generation using 
 
 Also part of [A De Novo Molecular Generation Method Using Latent Vector Based Generative Adversarial Network](https://chemrxiv.org/articles/A_De_Novo_Molecular_Generation_Method_Using_Latent_Vector_Based_Generative_Adversarial_Network/8299544).
 
-Currently only GPU version of the model is supported. You need access to a GPU to use it.
+>Currently only GPU version of the model is supported. You need access to a GPU to use it.
 
 >*More detailed instructions are to be pushed soon.*
 
