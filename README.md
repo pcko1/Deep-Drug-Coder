@@ -32,7 +32,7 @@ Currently only GPU version of the model is supported. You need access to a GPU t
 - `get_smiles_nll()`: Back-calculate the NLL of a known SMILES string to be sampled by the biased decoder.
 - `get_smiles_nll_batch()`: Back-calculate the NLLs of a batch of known SMILES strings to be sampled by the biased decoder.
 - `summary()`: Display essential architectural parameters.
-- `get_graphs()`: Export model graphs to .png files using `pydot` and `graphviz` (might fail).
+- `get_graphs()`: Export model graphs to .png files using `pydot` and `graphviz` ([might fail](https://github.com/AppliedDataSciencePartners/DeepReinforcementLearning/issues/3)).
 - `save()`: Save the model in a .zip directory.
 
 ### Future
