@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import tensorflow as tf
 
 config = tf.ConfigProto()
@@ -9,11 +8,13 @@ os.environ[
     "TF_CPP_MIN_LOG_LEVEL"
 ] = "3"  # Suppress UserWarning of TensorFlow while loading the model
 
+import shutil
+import zipfile
+import tempfile
+import pickle
+import numpy as np
 from datetime import datetime
 from functools import wraps
-import shutil, zipfile, tempfile, pickle
-
-from typing import overload
 
 import keras
 from keras.layers import (
