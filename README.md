@@ -9,7 +9,7 @@ Also part of [A De Novo Molecular Generation Method Using Latent Vector Based Ge
 Currently only GPU version of the model is supported. You need access to a GPU to use it.
 
 *More detailed instructions are to be pushed soon. Please refer to the demo notebooks for usage details.*
-
+___
 ### Custom Dependencies
 - [molvecgen](https://github.com/EBjerrum/molvecgen)
 
