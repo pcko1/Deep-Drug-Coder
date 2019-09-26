@@ -40,4 +40,4 @@ ___
 - Add CPU support.
 
 ### Issues
-Please report all installation / usage issues by opening an issue at this repo.
+Please report all installation / usage issues by opening an [issue](https://github.com/pcko1/Deep-Drug-Coder/issues) at this repo.
