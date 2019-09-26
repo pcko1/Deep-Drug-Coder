@@ -20,8 +20,12 @@ ___
 - Add the environment in the drop-down list of jupyter by `python -m ipykernel install --user --name ddc_env --display-name "ddc_env (python_3.6.7)"`.
 
 ### Usage
-- `conda activate ddc_env`
-- `from ddc_pub import ddc_v3 as ddc`
+``` bash
+conda activate ddc_env
+```
+```python
+from ddc_pub import ddc_v3 as ddc
+```
 
 ### API
 - `fit()`: Fit a DDC model to the dataset.
