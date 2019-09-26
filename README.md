@@ -40,10 +40,10 @@ from ddc_pub import ddc_v3 as ddc
 - `fit()`: Fit a DDC model to the dataset.
 - `vectorize()`: Convert a binary RDKit molecule to its One-Hot-Encoded representation.
 - `transform()`: Encode a vectorized molecule to its latent representation.
-- `predict()`: Decode a latent representation into a SMILES string and calculate its NLL.
-- `predict_batch()`: Decode a list of latent representations into SMILES strings and calculate their NLLs.
-- `get_smiles_nll()`: Back-calculate the NLL of a known SMILES string to be sampled by the biased decoder.
-- `get_smiles_nll_batch()`: Back-calculate the NLLs of a batch of known SMILES strings to be sampled by the biased decoder.
+- `predict()`: Decode a latent representation into a SMILES string and return its Negative Log Likelihood (NLL).
+- `predict_batch()`: Decode a list of latent representations into SMILES strings and return their NLLs.
+- `get_smiles_nll()`: Back-calculate the NLL of a known SMILES string, if it was to be sampled by the biased decoder.
+- `get_smiles_nll_batch()`: Back-calculate the NLLs of a batch of known SMILES strings, if they were to be sampled by the biased decoder.
 - `summary()`: Display essential architectural parameters.
 - `get_graphs()`: Export model graphs to .png files using `pydot` and `graphviz` ([might fail](https://github.com/AppliedDataSciencePartners/DeepReinforcementLearning/issues/3)).
 - `save()`: Save the model in a .zip directory.
