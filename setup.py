@@ -10,7 +10,7 @@ setup(
     license="GPLv3",
     packages=["ddc_pub"],
     install_requires=[
-        "numpy",
+        "numpy==1.16.5",
         "h5py",
         "ipywidgets",
         "tensorflow-gpu==1.12.0",
