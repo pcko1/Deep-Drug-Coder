@@ -26,6 +26,7 @@ ___
 - Create a predefined Python3.6 conda environment by `conda env create -f env/ddc_env.yml`. This ensures that you have the correct version of `rdKit` and `cudatoolkit`.
 - Run `python setup.py install` to install remaining dependencies and add the package to the Python path.
 - Add the environment in the drop-down list of jupyter by `python -m ipykernel install --user --name ddc_env --display-name "ddc_env (python_3.6.7)"`.
+- **(PATCH 10.10.19)**: Manually downgrade `tensorflow-gpu` to 1.12.0 by running `conda install -c anaconda tensorflow-gpu==1.12.0` after running the installer.
 
 ### Usage
 ``` bash
@@ -55,4 +56,5 @@ from ddc_pub import ddc_v3 as ddc
 ### Issues
 Please report all installation / usage issues by opening an [issue](https://github.com/pcko1/Deep-Drug-Coder/issues) at this repo.
 
-Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
+- Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
+- `tensorflow-gpu` version 1.12.0 has been officially deprecated from PyPI, you can only find it in conda as of now by running `conda install -c anaconda tensorflow-gpu==1.12.0` after running the installer.
