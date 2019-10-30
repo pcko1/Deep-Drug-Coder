@@ -1,9 +1,4 @@
 import os
-import tensorflow as tf
-
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
 os.environ[
     "TF_CPP_MIN_LOG_LEVEL"
 ] = "3"  # Suppress UserWarning of TensorFlow while loading the model
@@ -16,8 +11,7 @@ import numpy as np
 from datetime import datetime
 from functools import wraps
 
-import keras
-from keras.layers import (
+from tensorflow.keras.layers import (
     Input,
     Concatenate,
     Dense,
@@ -28,13 +22,13 @@ from keras.layers import (
     GaussianNoise,
     BatchNormalization,
 )
-from keras.layers import (
+from tensorflow.keras.layers import (
     CuDNNLSTM as LSTM,
 )  # Faster drop-in for LSTM using CuDNN on TF backend on GPU
-from keras.models import Model, load_model
-from keras.optimizers import Adam
-from keras.callbacks import ReduceLROnPlateau, LearningRateScheduler
-from keras.utils import multi_gpu_model, plot_model
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import ReduceLROnPlateau, LearningRateScheduler
+from tensorflow.keras.utils import multi_gpu_model, plot_model
 
 from sklearn.preprocessing import StandardScaler  # For the descriptors
 from sklearn.decomposition import PCA  # For the descriptors
