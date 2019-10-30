@@ -1,6 +1,8 @@
 # DeepDrugCoder (DDC): A network to encode or generate molecules
-
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/pcko1/Deep-Drug-Coder) [![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Python 3.6](https://img.shields.io/badge/python-3.6-yellow.svg)](https://www.python.org/downloads/release/python-367/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+**[UPDATE]** 30-10-2019: The code now supports TensorFlow 2.0.
+___
 
 Code for the purposes of [Direct Steering of de novo Molecular Generation using Descriptor Conditional Recurrent Neural Networks (cRNNs)](https://chemrxiv.org/articles/Direct_Steering_of_de_novo_Molecular_Generation_using_Descriptor_Conditional_Recurrent_Neural_Networks_cRNNs_/9860906).
 
@@ -26,7 +28,6 @@ ___
 - Create a predefined Python3.6 conda environment by `conda env create -f env/ddc_env.yml`. This ensures that you have the correct version of `rdKit` and `cudatoolkit`.
 - Run `python setup.py install` to install remaining dependencies and add the package to the Python path.
 - Add the environment in the drop-down list of jupyter by `python -m ipykernel install --user --name ddc_env --display-name "ddc_env (python_3.6.7)"`.
-- **(PATCH 10.10.19)**: Manually downgrade `tensorflow-gpu` to 1.12.0 by running `conda install -c anaconda tensorflow-gpu==1.12.0` after running the installer.
 
 ### Usage
 ``` bash
@@ -49,12 +50,7 @@ from ddc_pub import ddc_v3 as ddc
 - `get_graphs()`: Export model graphs to .png files using `pydot` and `graphviz` ([might fail](https://github.com/AppliedDataSciencePartners/DeepReinforcementLearning/issues/3)).
 - `save()`: Save the model in a .zip directory.
 
-### Future
-- Add support for `tensorflow==2.0.0` and `keras==2.3.0`.
-- Add CPU support.
-
 ### Issues
 Please report all installation / usage issues by opening an [issue](https://github.com/pcko1/Deep-Drug-Coder/issues) at this repo.
 
 - Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
-- `tensorflow-gpu` version 1.12.0 has been officially deprecated from PyPI, you can only find it in conda as of now by running `conda install -c anaconda tensorflow-gpu==1.12.0` after running the installer.
