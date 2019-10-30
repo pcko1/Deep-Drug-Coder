@@ -1,4 +1,4 @@
-name: ddc_env
+name: ddc_env_tf2
 channels:
   - rdkit
   - anaconda
