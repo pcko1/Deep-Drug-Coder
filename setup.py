@@ -13,7 +13,7 @@ setup(
         "numpy          == 1.16.5",
         "h5py           == 2.9.0",
         "tensorflow-gpu == 2.0.0",
-        "keras          == 2.2.5",
+        #"keras          == 2.2.5",
         "tqdm           == 4.35.0",
         "scikit-learn   == 0.21.3",
         "scipy          == 1.3.1",
