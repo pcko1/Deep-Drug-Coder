@@ -22,7 +22,7 @@ from tensorflow.keras.layers import (
     GaussianNoise,
     BatchNormalization,
 )
-from tensorflow.keras.layers import (
+from tensorflow.compat.v1.keras.layers import (
     CuDNNLSTM as LSTM,
 )  # Faster drop-in for LSTM using CuDNN on TF backend on GPU
 from tensorflow.keras.models import Model, load_model
