@@ -54,3 +54,7 @@ from ddc_pub import ddc_v3 as ddc
 Please report all installation / usage issues by opening an [issue](https://github.com/pcko1/Deep-Drug-Coder/issues) at this repo.
 
 - Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
+
+
+___
+Cheers if you were brought here by [this blog post](https://www.wildcardconsulting.dk/master-your-molecule-generator-2-direct-steering-of-conditional-recurrent-neural-networks-crnns/). If not, give it a read :)
