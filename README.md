@@ -6,7 +6,6 @@ ___
 
 Code for the purposes of [Direct Steering of de novo Molecular Generation using Descriptor Conditional Recurrent Neural Networks (cRNNs)](https://chemrxiv.org/articles/Direct_Steering_of_de_novo_Molecular_Generation_using_Descriptor_Conditional_Recurrent_Neural_Networks_cRNNs_/9860906).
 
-Also part of [A De Novo Molecular Generation Method Using Latent Vector Based Generative Adversarial Network](https://chemrxiv.org/articles/A_De_Novo_Molecular_Generation_Method_Using_Latent_Vector_Based_Generative_Adversarial_Network/8299544).
 
 ___
 
