@@ -1,4 +1,4 @@
-These datasets are filtered versions of ChEMBL25 and Ex-CAPEDB.
+These datasets are filtered extracts from ChEMBL25 and ExCAPE-DB.
 ___
 
 
