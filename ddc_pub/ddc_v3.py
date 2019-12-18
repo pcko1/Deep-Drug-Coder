@@ -590,7 +590,7 @@ class DDC:
         self.__mol_to_latent_model = Model(encoder_inputs, neck_outputs)
 
         # Name it!
-        self.mol_to_latent_model.name = "mol_to_latent_model"
+        self.mol_to_latent_model._name = "mol_to_latent_model"
 
     def __build_latent_to_states_model(self):
         """Model that constructs the initial states of the decoder from a latent molecular representation.
@@ -629,7 +629,7 @@ class DDC:
         self.__latent_to_states_model = Model(latent_input, decoder_state_list)
 
         # Name it!
-        self.latent_to_states_model.name = "latent_to_states_model"
+        self.latent_to_states_model._name = "latent_to_states_model"
 
     def __build_batch_model(self):
         """Model that returns a vectorized SMILES string of OHE characters.
@@ -681,7 +681,7 @@ class DDC:
         self.__batch_model = Model(inputs=inputs, outputs=[outputs])
 
         # Name it!
-        self.batch_model.name = "batch_model"
+        self.batch_model._name = "batch_model"
 
     def __build_model(self):
         """Full model that constitutes the complete pipeline.
