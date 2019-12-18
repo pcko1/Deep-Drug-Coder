@@ -25,7 +25,7 @@ ___
 ### Installation
 - Clone the repo and navigate to it.
 - Create a predefined Python3.6 conda environment by `conda env create -f env/ddc_env.yml`. This ensures that you have the correct version of `rdKit` and `cudatoolkit`.
-- Run `python setup.py install` to install remaining dependencies and add the package to the Python path.
+- Run `pip install .` to install remaining dependencies and add the package to the Python path.
 - Add the environment in the drop-down list of jupyter by `python -m ipykernel install --user --name ddc_env --display-name "ddc_env (python_3.6.7)"`.
 
 ### Usage
