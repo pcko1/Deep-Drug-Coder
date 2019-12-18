@@ -23,6 +23,7 @@ ___
 - [molvecgen](https://github.com/EBjerrum/molvecgen)
 
 ### Installation
+- Install `git-lfs` as instructed [here](https://github.com/git-lfs/git-lfs/wiki/Installation). This is necessary in order to download the datasets.
 - Clone the repo and navigate to it.
 - Create a predefined Python3.6 conda environment by `conda env create -f env/ddc_env.yml`. This ensures that you have the correct version of `rdKit` and `cudatoolkit`.
 - Run `pip install .` to install remaining dependencies and add the package to the Python path.
