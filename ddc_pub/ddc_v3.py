@@ -1052,7 +1052,7 @@ class DDC:
         return latent.reshape((latent.shape[0], 1, latent.shape[1]))
 
     # @timed
-    def predict(self, latent, temp=1):
+    def predict(self, latent, temp=1, rng_seed=None):
         """Generate a single SMILES string.
         The states of the RNN are set based on the latent input.
         Careful, "latent" must be: the output of self.transform()
@@ -1070,6 +1070,10 @@ class DDC:
         :rtype: list
         """
 
+        # Pass rng_seed for repeatable sampling 
+        if rng_seed is not None:
+            np.random.seed(rng_seed)
+        
         # Scale inputs if model is trained on scaled data
         if self.scaler is not None:
             latent = self.scaler.transform(
@@ -1126,7 +1130,7 @@ class DDC:
                 return smiles, NLL
 
     # @timed
-    def predict_batch(self, latent, temp=1):
+    def predict_batch(self, latent, temp=1, rng_seed=None):
         """Generate multiple biased SMILES strings.
         Careful, "latent" must be: the output of self.transform()
                                    or
@@ -1146,6 +1150,10 @@ class DDC:
         :rtype: list
         """
 
+        # Pass rng_seed for repeatable sampling 
+        if rng_seed is not None:
+            np.random.seed(rng_seed)
+        
         if latent.shape[0] == 1:
             # Make a batch prediction by repeating the same latent vector for every neuron
             latent = np.ones((self.batch_input_length, self.codelayer_dim)) * latent
