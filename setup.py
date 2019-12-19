@@ -16,10 +16,11 @@ setup(
         "tqdm           == 4.35.0",
         "scikit-learn   == 0.21.3",
         "scipy          == 1.3.1",
-        "ipykernel      == 5.1.2",
+        "ipykernel      == 5.1.1",
         "ipython",
         "matplotlib     == 3.1.1",
         "pandas         == 0.25.1",
+	"molsets        == 0.2"
     ],
     zip_safe=False,
 )
