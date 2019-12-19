@@ -10,5 +10,6 @@ dependencies:
   - rdkit=2018.09.1.0=py36h71b666b_1
   - python=3.6.7=h0371630_0
   - seaborn=0.9.0
+  - nbconvert=5.6.1
   # Old tensorflow version used in the publication
   #- tensorflow-gpu=1.12.0
