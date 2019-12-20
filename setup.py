@@ -13,7 +13,7 @@ setup(
         "numpy",
         "h5py",
         "ipywidgets",
-        "tensorflow-gpu==1.12.0",
+        #"tensorflow-gpu==1.12.0",
         "keras==2.2.5",
         "tqdm",
         "scikit-learn",
