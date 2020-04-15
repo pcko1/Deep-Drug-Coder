@@ -131,7 +131,7 @@ class SmilesGenerator(Iterator):
         return batch_x, batch_y
 
 
-class HetSmilesGenerator(SmilesGenerator):
+class HetSmilesGenerator2(SmilesGenerator):
     """Hetero (maybe) generator class, for use to train the autoencoder.
     
     smilesvectorizer creates the input for the encoder
@@ -346,6 +346,77 @@ class CodeGenerator2(SmilesGenerator):
             batch_1D_o[i] = chem1d_dec[:, 1:, :]  # No start_char
 
         return [batch_1D, batch_1D_i], batch_1D_o
+
+
+class HetSmilesGenerator(Sequence):
+    def __init__(
+        self,
+        x,
+        y,  # TODO: this is unused, remove from everywhere
+        smilesvectorizer,
+        smilesvectorizer_2,
+        batch_size=32,
+        shuffle=False,
+        seed=None,
+        dtype=np.float32,
+    ):
+        super().__init__()
+        self.smilesvectorizer = smilesvectorizer
+        self.smilesvectorizer_2 = smilesvectorizer_2
+        self.x = x
+        self.batch_size = batch_size
+        self.shuffle = shuffle
+        self.dtype = dtype
+
+        # Assume that all binmols are to be used
+        # Otherwise use list_IDs as an argument to pass an arbitrary selection of IDs to use
+        self.list_IDs = np.arange(len(self.x))
+        self.num_batches = int(np.floor(len(self.x) / self.batch_size))
+
+        self.input_dims = list(self.smilesvectorizer.dims)
+        self.dec_dims = list(self.smilesvectorizer.dims)
+        self.dec_dims[0] = self.dec_dims[0] - 1
+
+        self.__shuffle()
+
+    def __len__(self):
+        return self.num_batches
+
+    def __getitem__(self, batch_id):
+        indices_of_batch = self.indices[
+            batch_id * self.batch_size : (batch_id + 1) * self.batch_size
+        ]
+        list_IDs_temp = [self.list_IDs[i] for i in indices_of_batch]
+        return self.__get_batch(list_IDs_temp)
+
+    def __get_batch(self, list_IDs_temp):
+        batch_1D = np.zeros(
+            tuple([self.batch_size] + self.input_dims), dtype=self.dtype
+        )
+        batch_1D_i = np.zeros(
+            tuple([self.batch_size] + self.dec_dims), dtype=self.dtype
+        )
+        batch_1D_o = np.zeros(
+            tuple([self.batch_size] + self.dec_dims), dtype=self.dtype
+        )
+
+        for i, ID in enumerate(list_IDs_temp):
+            binmol = self.x[ID : ID + 1]
+            chem1d_enc = self.smilesvectorizer.transform(binmol)
+            chem1d_dec = self.smilesvectorizer_2.transform(binmol)
+            batch_1D[i] = chem1d_enc
+            batch_1D_i[i] = chem1d_dec[:, 0:-1, :]  # Including start_char
+            batch_1D_o[i] = chem1d_dec[:, 1:, :]  # No start_char
+
+        return [batch_1D, batch_1D_i], batch_1D_o
+
+    def __shuffle(self):
+        self.indices = np.arange(len(self.list_IDs))
+        if self.shuffle == True:
+            np.random.shuffle(self.indices)
+
+    def on_epoch_end(self):
+        self.__shuffle()
 
 
 class CodeGenerator(Sequence):
