@@ -95,7 +95,7 @@ class ModelAndHistoryCheckpoint(ModelCheckpoint):
                 "_DDC__latent_to_states_model",
                 "_DDC__batch_model",
                 "_DDC__sample_model",
-                "_DDC_multi_sample_model",
+                "_DDC__multi_sample_model",
                 "_DDC__model",
             ]
 
