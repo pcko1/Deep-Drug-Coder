@@ -16,7 +16,7 @@ tl_model = ddc_unbiased.DDC(model_name="models/tl_model")
 The `qsar_model.pickle` should be loaded as:
 ```python
 import pickle
-with open(pxc50_model_filename, 'rb') as file:
+with open("models/qsar_model.pickle", 'rb') as file:
         model_dict = pickle.load(file)
 drd2_model = model_dict["classifier_sv"]
 ```
