@@ -5,16 +5,16 @@
 **[UPDATE]** 30-10-2019: The code now only supports `tensorflow-gpu` >= 2.0.
 ___
 
-Code for the purposes of [Direct Steering of de novo Molecular Generation using Descriptor Conditional Recurrent Neural Networks (cRNNs)](https://chemrxiv.org/articles/Direct_Steering_of_de_novo_Molecular_Generation_using_Descriptor_Conditional_Recurrent_Neural_Networks_cRNNs_/9860906).
+Code for the purposes of [Direct Steering of de novo Molecular Generation using Descriptor Conditional Recurrent Neural Networks (cRNNs)](https://www.nature.com/articles/s42256-020-0174-5).
 
 Cheers if you were brought here by [this blog post](https://www.wildcardconsulting.dk/master-your-molecule-generator-2-direct-steering-of-conditional-recurrent-neural-networks-crnns/). If not, give it a read :)
 ___
 
 Deep learning has acquired considerable momentum over the past couple of years in the domain of de-novo drug design. Particularly, transfer and reinforcement learning have demonstrated the capability of steering the generative process towards chemical regions of interest. In this work, we propose a simple approach to the focused generative task by constructing a conditional recurrent neural network (cRNN). For this purpose, we aggregate selected molecular descriptors along with a QSAR-based bioactivity label and transform them into initial LSTM states before starting the generation of SMILES strings that are focused towards the aspired properties. We thus tackle the inverse QSAR problem directly by training on molecular descriptors, instead of iteratively optimizing around a set of candidate molecules. The trained cRNNs are able to generate molecules near multiple specified conditions, while maintaining an output that is more focused than traditional RNNs yet less focused than autoencoders. The method shows promise for applications in both scaffold hoping and ligand series generation, depending on whether the cRNN is trained on calculated scalar molecular properties or structural fingerprints. This also demonstrates that fingerprint-to-molecule decoding is feasible, leading to molecules that are similar – if not identical – to the ones the fingerprints originated from. Additionally, the cRNN is able to generate a larger fraction of predicted active compounds against the DRD2 receptor when compared to an RNN trained with the transfer learning model.
 
-*Currently only GPU version of the model is supported. You need access to a GPU to use it.*
+*Only a GPU version of the model is supported. You need access to a GPU to use it.*
 
-*More detailed instructions are to be pushed soon. Please refer to the demo notebooks for usage details.*
+*Please refer to the demo notebooks for usage details.*
 
 ![Figure from manuscript](figures/model.png)
 
