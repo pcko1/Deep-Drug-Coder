@@ -54,4 +54,23 @@ from ddc_pub import ddc_v3 as ddc
 ### Issues
 Please report all installation / usage issues by opening an [issue](https://github.com/pcko1/Deep-Drug-Coder/issues) at this repo.
 
+### Cite
+Kotsias, P.-C. et al. Direct steering of de novo molecular generation with descriptor conditional recurrent neural networks. *Nat. Mach. Intell.* **2**, (2020)
+
+or in `bibtex`:
+
+```bibtex
+@article{Kotsias2020,
+isbn = {4225602001},
+issn = {2522-5839},
+journal = {Nature Machine Intelligence},
+number = {May},
+publisher = {Springer US},
+title = {Direct steering of de novo molecular generation with descriptor conditional recurrent neural networks},
+url = {https://doi.org/10.1038/s42256-020-0174-5},
+volume = {2},
+year = {2020}
+}
+```
+
 - Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
