@@ -2,7 +2,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/pcko1/Deep-Drug-Coder) [![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/189198308.svg)](https://zenodo.org/badge/latestdoi/189198308)
 [![Python 3.6](https://img.shields.io/badge/python-3.6-yellow.svg)](https://www.python.org/downloads/release/python-367/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-**[UPDATE]** 30-10-2019: The code now only supports `tensorflow-gpu` >= 2.0.
+**NOTE**: The code now only supports `tensorflow-gpu` >= 2.0.
 ___
 
 Code for the purposes of [Direct Steering of de novo Molecular Generation using Descriptor Conditional Recurrent Neural Networks (cRNNs)](https://www.nature.com/articles/s42256-020-0174-5).
@@ -39,7 +39,7 @@ conda activate ddc_env
 from ddc_pub import ddc_v3 as ddc
 ```
 
-### API
+### Methods
 - `fit()`: Fit a DDC model to the dataset.
 - `vectorize()`: Convert a binary RDKit molecule to its One-Hot-Encoded representation.
 - `transform()`: Encode a vectorized molecule to its latent representation.
@@ -72,5 +72,3 @@ volume = {2},
 year = {2020}
 }
 ```
-
-- Currently, we have noticed erroneous behavior of some functions with `numpy.__version__==1.17.2`, please stick to `1.16.5` for now.
