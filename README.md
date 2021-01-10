@@ -62,14 +62,14 @@ or in `bibtex`:
 
 ```bibtex
 @article{Kotsias2020,
-isbn = {4225602001},
-issn = {2522-5839},
-journal = {Nature Machine Intelligence},
-number = {May},
-publisher = {Springer US},
-title = {Direct steering of de novo molecular generation with descriptor conditional recurrent neural networks},
-url = {https://doi.org/10.1038/s42256-020-0174-5},
-volume = {2},
-year = {2020}
+  isbn = {4225602001},
+  issn = {2522-5839},
+  journal = {Nature Machine Intelligence},
+  number = {May},
+  publisher = {Springer US},
+  title = {Direct steering of de novo molecular generation with descriptor conditional recurrent neural networks},
+  url = {https://doi.org/10.1038/s42256-020-0174-5},
+  volume = {2},
+  year = {2020}
 }
 ```
