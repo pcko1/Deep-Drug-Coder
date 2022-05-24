@@ -12,7 +12,7 @@ setup(
     install_requires=[
         "numpy          == 1.16.5",
         "h5py           == 2.9.0",
-        "tensorflow-gpu == 2.0.0",
+        "tensorflow-gpu == 2.6.4",
         "tqdm           == 4.35.0",
         "scikit-learn   == 0.21.3",
         "scipy          == 1.3.1",
