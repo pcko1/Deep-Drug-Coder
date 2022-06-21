@@ -10,7 +10,7 @@ setup(
     license="MIT",
     packages=["ddc_pub"],
     install_requires=[
-        "numpy          == 1.16.5",
+        "numpy          == 1.22.0",
         "h5py           == 2.9.0",
         "tensorflow-gpu == 2.0.0",
         "tqdm           == 4.35.0",
